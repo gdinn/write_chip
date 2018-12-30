@@ -3,7 +3,7 @@ This is script was built to compile and burn programs into atmega328p with a sin
 
 After clonning, my sugestion is that you move the file to your project folder and execute the commands:
 ```
-chmod a+x
+chmod a+x write_chip.sh
 ```
 To make the file executable (Mandatory for Mac users)
 
