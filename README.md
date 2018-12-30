@@ -11,6 +11,8 @@ and
 ```
 ./write_chip.sh -n main.c,ATmega328.c,spi.c -g
 ```
+*main.c,ATmega328.c,spi.c are hipothetical files*
+
 Being -n the parameter to specify the path to the files and -g the flag to specify that you want the burning process as well.
 
 To use this script you must have well set on your computer:
