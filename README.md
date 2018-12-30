@@ -15,8 +15,8 @@ Being -n the parameter to specify the path to the files and -g the flag to speci
 
 To use this script you must have well set on your computer:
 
-avr-gcc
-avrdude
+- avr-gcc
+- avrdude
 
 
 Used and tested on ubuntu 18.04.
