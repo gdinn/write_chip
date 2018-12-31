@@ -14,7 +14,7 @@ while getopts ":n:g" opt; do
 		erro=0
 		args=$OPTARG
 		for arg in $args; do
-			if [ ${arg##*.} != "c" ] && [ ${arg##*.} != "cpp" ] ; then
+			if [ ${arg##*.} != "c" ] && [ ${arg##*.} != "cpp" ]; then
 				erro=1
 			fi
 		done
@@ -22,18 +22,18 @@ while getopts ":n:g" opt; do
 		if [ $erro = 0 ]; then
 			echo "Build started"
 			avr-gcc -g -Os -mmcu=atmega328p -c $OPTARG
-      args2=()
+			args2=()
 			for arg in $args; do
-				args2+=( "${arg%.*}"".o" )
+				args2+=("${arg%.*}"".o")
 			done
 
-      avr-gcc -mmcu=atmega328p "${args2[@]}" -o proj.elf			
-      avr-objcopy -O ihex -j .text -j .data proj.elf proj.hex
+			avr-gcc -mmcu=atmega328p "${args2[@]}" -o proj.elf
+			avr-objcopy -O ihex -j .text -j .data proj.elf proj.hex
 
 			file_provided="proj.hex"
 			echo "Build finished"
 		else
-			die 'ERROR: "-n" requires a .c file'
+			die 'ERROR: "-n" requires .c or .cpp file(s)'
 		fi
 		;;
 	g)
