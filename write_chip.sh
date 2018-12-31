@@ -14,7 +14,7 @@ while getopts ":n:g" opt; do
 		erro=0
 		args=$OPTARG
 		for arg in $args; do
-			if [ ${arg##*.} != "c" ]; then
+			if [ ${arg##*.} != "c" ] && [ ${arg##*.} != "cpp" ] ; then
 				erro=1
 			fi
 		done
